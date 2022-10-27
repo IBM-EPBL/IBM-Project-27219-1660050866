@@ -1,1 +1,0 @@
-Personal Expense Tracker Application
