@@ -20,3 +20,9 @@ will be updated which will be visible to the user.  Also, users can get an analy
 graphical forms. They have an option to set a limit for the amount to be used for that particular month if the 
 limit is exceeded the user will be notified with an email alert.
 
+{
+  "schemaVersion": 1,
+  "label": "hello",
+  "message": "sweet world",
+  "color": "orange"
+}
