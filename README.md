@@ -5,10 +5,10 @@ Team Member - Lavan <br />
 Team Member - Sailesh Kathir <br />
 Team Member - Yuvaraja <br />
 
-#Category
+###**Category**
 ->Cloud App Development
 
-#Project Description:
+###**Project Description:**
 
 In simple words, personal finance entails all the financial decisions and activities that a Finance app makes 
 your life easier by helping you to manage your finances efficiently. A personal finance app will not only help 
