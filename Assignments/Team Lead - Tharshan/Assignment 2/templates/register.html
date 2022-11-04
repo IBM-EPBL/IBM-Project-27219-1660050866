@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+{% if error %}
+<div id="error">{{ error }}</div>
+{% endif %}
+<form method="post">
+    <h3>Register</h3>
+
+    <label for="username">Username</label>
+    <input type="text" placeholder="Enter your Username" id="username" name="username" required>
+
+    <label for="rollno">Roll Number</label>
+    <input type="number" placeholder="Enter your Roll Number" id="rollno" name="rollno" required>
+
+    <label for="email">Email</label>
+    <input type="text" placeholder="Enter your Email" id="email" name="email" required>
+
+    <label for="password">Password</label>
+    <input type="password" placeholder="Enter your Password" id="password" name="password" minlength="6" required><br />
+
+    <a href="/login">Already have an account?</a>
+
+    <button type="submit">Sign Up</button>
+</form>
+{% endblock %}
