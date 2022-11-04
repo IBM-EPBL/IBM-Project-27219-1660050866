@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+ 
+{% block page_content %}
+{% if error %}
+  <div id="error">{{ error }}</div>
+{% endif %}
+<form method="post">
+   <h3>Change Your Password</h3>
+
+   <label for="oldpassword">Old Password</label>
+   <input type="password" placeholder="Enter your old Password" id="oldpassword" name="oldpassword" required minlength="6">
+
+   <label for="password">Password</label>
+   <input type="password" placeholder="Enter your new Password" id="password" name="password" required minlength="6"><br />
+
+   <button type="submit">Change</button>
+   <a href="/"><button class="delete-btn" type="button">Cancel</button></a>
+
+</form>
+{% endblock %}
