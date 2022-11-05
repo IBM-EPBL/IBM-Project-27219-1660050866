@@ -1,0 +1,97 @@
+#resume-container{
+    border-style: initial;
+    /* padding: 100px; */
+}
+#name{
+    font-size: 20px;
+}
+#work{
+    font-size: 20px;
+    padding : 10%;
+}
+.profile-image { 
+    border-top-left-radius: 50% 50%; 
+    border-top-right-radius: 50% 50%; 
+    border-bottom-right-radius: 50% 50%; 
+    border-bottom-left-radius: 50% 50%; 
+}
+.about_profile{
+    font-size: 28px;
+    padding-bottom: 0px;
+    /* border-radius: 0px; */
+    margin-bottom: -14px;
+}
+.about_content {
+    width: 200px;
+     line-height: 1.5rem;
+    overflow-wrap: break-word;  
+    word-wrap: break-word; 
+    word-break: break-word;
+}
+#resume{
+    width: 600px;
+}
+/* Right side borders background */
+#left-side{
+    padding:10px;
+    background-color:#EFF0F5;
+    width: 200px;
+}
+#right_side{
+    padding-left:42px;
+    background-color:white;
+    align-items:center;
+    width: 500px;
+}
+.title{
+    font-size: 28px;
+    padding-bottom: 0px;
+    /* border-radius: 0px; */
+    margin-bottom: -14px;
+}
+#resume_contents{
+    display: flex;
+    flex: 1;
+    width: 100%;
+    border: 2px;
+    /* align-content: center; */
+    border-style:initial;
+    
+    
+    padding-left: 397px;
+
+    
+}
+/* #resume_contents{
+    width: 50%;
+    float: left;
+    padding: 20px;
+    border-style: dashed;
+} */
+
+.venue{
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    color:grey;
+}
+.duration{
+    font-size: 14px;
+    
+}
+.email{
+    font-size: 15px;
+    align-content:center;
+}
+
+.material-symbols-outlined{
+    float:left;
+    font-size: 21px !important;
+    padding-right: 6px;
+}
+.icons_align{
+    float:left;
+    font-size: 21px !important;
+    padding-right: 6px;
+}
+
