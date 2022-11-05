@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class="details-container">
+    <h2>Welcome {{ username }}</h2>
+    <h3><b>Roll number: </b>{{ rollno }}</h3>
+    <h3><b>Email: </b>{{ email }}</h3>
+    <a href="/update"><button type="button">Change Password</button></a>
+    <a href="/delete"><button class="delete-btn" type="button">Delete Account</button></a>
+    <a href="/logout"><button type="button">Log Out</button></a>
+</div>
+{% endblock %}
