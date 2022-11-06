@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "88310250-c690-4169-95fc-321603210b2d", // The ID of this integration.
+        region: "au-syd", // The region your integration is hosted in.
+        serviceInstanceID: "6e65875c-b303-4081-a1a8-a167e275a78a", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+</script>
+</head>
+<body><center><h1>SOME FUNNY IMAGES
+      {% for row in files %}
+         <div style="border: 1px solid #EFEFEF;margin:10px;">
+            <h3>{{row.split(".")[0]}} </h3>
+            <img src="https://images-12345.s3.au-syd.cloud-object-storage.appdomain.cloud/{{row}}" width="150px"></td>
+         </div>
+      {% endfor %}
+</h1></center>
+
+</body>
+</html>
