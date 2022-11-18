@@ -4,6 +4,7 @@ body {
     display: flex;
     justify-content: center;
     height: 100vh;
+    
 }
 
 .form {
@@ -20,12 +21,16 @@ body {
 }
 
 .title {
+
     margin-left: 72px;
     color: #eee;
     font-family: cursive;
     font-size: 36px;
     font-weight: 600;
     margin-top: 30px;
+}
+.nav{
+    position: relative;
 }
 
 .input-container {
