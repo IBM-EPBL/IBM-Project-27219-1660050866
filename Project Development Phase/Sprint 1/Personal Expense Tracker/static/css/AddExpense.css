@@ -1,0 +1,108 @@
+body {
+    align-items: center;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form {
+    background-color: cadetblue;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 647px;
+    padding: 20px;
+    width: 400px;
+}
+
+.container-fluid{
+    background-color: cadetblue;
+}
+
+.title {
+    margin-left: 72px;
+    color: #eee;
+    font-family: cursive;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.ic1 {
+    margin-top: 40px;
+}
+
+.ic2 {
+    margin-top: 30px;
+}
+
+.input {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 14px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+}
+
+.placeholder {
+    color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+}
+
+.input:not(:placeholder-shown)~.placeholder {
+    color: transparent;
+}
+
+.input:focus~.placeholder {
+    color: transparent;
+}
+
+.submit {
+    margin-left: 104px;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 43%;
+    background-color: #dd4300;
+}
+
+.submit:active {
+    background-color: #08d;
+}
+
+.login {
+    color: white;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+.register {
+    color: white;
+    margin-top: 30px;
+    margin-left: 100px;
+}
