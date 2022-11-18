@@ -1,5 +1,3 @@
-
-
 import ibm_db
 from flask import Flask, redirect, render_template, request, session, url_for
 from markupsafe import escape
@@ -18,7 +16,7 @@ app.config['MAIL_PASSWORD'] = os.environ.get('SENDGRID_API_KEY')
 app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_DEFAULT_SENDER')
 mail = Mail(app)
 
-conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=764264db-9824-4b7c-82df-40d1b13897c2.bs2io90l08kqb1od8lcg.databases.appdomain.cloud;PORT=32536;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=dkh61031;PWD=epbaJyxx5Cfi7vTl",'','')
+conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=2d46b6b4-cbf6-40eb-bbce-6251e6ba0300.bs2io90l08kqb1od8lcg.databases.appdomain.cloud;PORT=32328;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=cgw60170;PWD=hL5klKYr3HUySK4X", '', '')
 
 app.secret_key='a'
 
@@ -83,7 +81,7 @@ def addrec():
     phone = request.form['phone']
     password= request.form['password']
 
-    sql = "SELECT * FROM USERS WHERE NAME =?"
+    sql = "SELECT * FROM USER WHERE NAME =?"
     stmt = ibm_db.prepare(conn, sql)
     ibm_db.bind_param(stmt,1,name)
     ibm_db.execute(stmt)
@@ -92,7 +90,7 @@ def addrec():
     if account:
       return render_template('login.html', msg="You are already a member, please login using your details")
     else:
-      insert_sql = "INSERT INTO USERS (Name,email,phone,password) VALUES (?,?,?,?)"
+      insert_sql = "INSERT INTO USER (Name,email,phone,password) VALUES (?,?,?,?)"
       prep_stmt = ibm_db.prepare(conn, insert_sql)
       ibm_db.bind_param(prep_stmt, 1, name)
       ibm_db.bind_param(prep_stmt, 2, email )
@@ -114,7 +112,7 @@ def signIn():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
-        sql ="SELECT * FROM USERS WHERE  email = ? AND password = ?"
+        sql ="SELECT * FROM USER WHERE  email = ? AND password = ?"
         stmt = ibm_db.prepare(conn, sql)
         ibm_db.bind_param(stmt,1,email)
         ibm_db.bind_param(stmt,2,password)
