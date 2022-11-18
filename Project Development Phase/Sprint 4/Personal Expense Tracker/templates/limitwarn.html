@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/history.css" />
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body style="background-color: bisque;">
+    <nav class="navbar navbar-default" style="background-color: cadetblue;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" style="font-family:cursive;" href="#" style="color:white;">
+                    Expense Tracker</a>
+            </div>
+            <ul class="nav navbar-nav">
+
+                <li><a href="/home" style="color:white;">Home</a></li>
+                <li><a href="/addExpense" style="color:white;">Add</a></li>
+                <li><a href="/history" style="color:white;">History</a></li>
+                <li class="active"><a href="/limit" style="color:#15172b;">Limit</a></li>
+                <li><a href="/today" style="color:white;">Report</a></li>
+
+                <li><a href="/logout" style="color:white;">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <body>
+        <div>
+            <img src="https://img.freepik.com/free-vector/comic-speech-bubble-with-oh-no-text_1308-54579.jpg?size=626&ext=jpg&ga=GA1.2.977045461.1664646381&semt=sph" class="center" />
+            <h1 style="text-align:center; margin-top: 30px;">Limit Exceeded !!</h1>
+            <p style="text-align: center;">Click <a href="/today">here</a> to view your Expense Report</p>
+        </div>
+    </body>
+
+</html>
