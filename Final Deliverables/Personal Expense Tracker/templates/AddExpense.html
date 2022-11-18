@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add Expense</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/AddExpense.css" />
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default" style="background-color: #15172b;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" style="color:white; font-family: cursive;">
+                    Expense Tracker</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/home" style="color:white;">Home</a></li>
+                <li class="active"><a href="/addExpense" style="color:#15172b;">Add</a></li>
+                <li><a href="/history" style="color:white;">History</a></li>
+                <li><a href="/limit" style="color:white;">Limit</a></li>
+                <li><a href="/today" style="color:white;">Report</a></li>
+                <li><a href="/logout" style="color:white;">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <form class="form" action="{{ url_for('add') }}" method="POST">
+        <div class="title">Add Expense</div>
+        <div class="input-container ic1">
+            <input id="date" class="input" type="date" name="date" placeholder=" "/>
+            
+        </div>
+        <div class="input-container ic2">
+            <input id="expenseName" class="input" type="text" name="expenseName" placeholder=" " />
+            <label for="expenseName" class="placeholder">Expense Name</label>
+        </div>
+        <div class="input-container ic2">
+            <input id="expenseAmount" class="input" type="text" name="expenseAmount" placeholder=" " />
+            <label for="expenseAmount" class="placeholder">Expense Amount</label>
+        </div>
+        
+        <div class="input-container ic2">
+            <select id="expenseCategory" class="input" name="expenseCategory" >
+                <option value="food">Food</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="business">Business</option>
+                <option value="rent">Rent</option>
+                <option value="emi">EMI</option>
+                <option value="miscellaneous">Miscellaneous</option>
+            </select>
+            
+        </div>
+        <div class="input-container ic2">
+            <select id="payMethod" class="input" name="payMethod">
+                <option value="cash">Cash</option>
+                <option value="debitCard">Debit Card</option>
+                <option value="creditCard">Credit Card</option>
+                <option value="ePayment">E-payment</option>
+                <option value="onlineBanking">Online Banking</option>
+            </select>
+        
+        </div>
+        <input type="submit" class="submit" value="Submit">
+
+    </form>
+</body>
+
+</html>
