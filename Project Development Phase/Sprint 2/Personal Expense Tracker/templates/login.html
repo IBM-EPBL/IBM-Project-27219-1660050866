@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Expense Tracker - Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/css/login.css" />
+
+</head>
+
+<body>
+    <div>
+        <h4> {{msg}} </h4>
+    </div>
+    <div>
+        <form action="{{ url_for('signIn') }}" method="POST" class="form">
+            <div class="title">Login</div>
+            <div class="input-container ic1">
+                <input id="email" class="input" type="text" name="email" placeholder=" " />
+                <div class="cut"></div>
+                <label for="email" class="placeholder">Email</label>
+            </div>
+            <div class="input-container ic2">
+                <input id="password" class="input" type="password" name="password" placeholder=" " />
+                <div class="cut"></div>
+                <label for="password" class="placeholder">Password</label>
+            </div>
+
+            <input type="submit" class="submit" value="Login">
+            <div class="register">
+                <p>New User? <a href="/register">Register Here</a></p>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

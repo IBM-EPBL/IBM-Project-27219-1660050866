@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add Expense</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/css/AddExpense.css" />
+
+</head>
+
+<body>
+
+    <form class="form" action="{{ url_for('add') }}" method="POST">
+        <div class="title">Add Expense</div>
+        <div class="subtitle">Note: Add accurate expense details</div>
+        <div class="input-container ic1">
+            <input id="date" class="input" type="date" name="date" placeholder=" " />
+            <div class="cut"></div>
+            <label for="date" class="placeholder">Date</label>
+        </div>
+        <div class="input-container ic2">
+            <input id="expenseName" class="input" type="text" name="expenseName" placeholder=" " />
+            <div class="cut"></div>
+            <label for="expenseName" class="placeholder">Expense Name</label>
+        </div>
+        <div class="input-container ic2">
+            <input id="expenseAmount" class="input" type="text" name="expenseAmount" placeholder=" " />
+            <div class="cut"></div>
+            <label for="expenseAmount" class="placeholder">Expense Amount</label>
+        </div>
+        <div class="input-container ic2">
+            <select id="expenseCategory" class="input" name="expenseCategory" placeholder=" ">
+                <option value="food">Food</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="business">Business</option>
+                <option value="rent">Rent</option>
+                <option value="emi">EMI</option>
+                <option value="miscellaneous">Miscellaneous</option>
+            </select>
+            <div class="cut"></div>
+            <label for="expenseCategory" class="placeholder">Expense Category</label>
+        </div>
+        <div class="input-container ic2">
+            <select id="payMethod" class="input" name="payMethod" placeholder=" ">
+                <option value="cash">Cash</option>
+                <option value="debitCard">Debit Card</option>
+                <option value="creditCard">Credit Card</option>
+                <option value="ePayment">E-payment</option>
+                <option value="onlineBanking">Online Banking</option>
+            </select>
+            <div class="cut"></div>
+            <label for="payMethod" class="placeholder">Payment Method</label>
+        </div>
+        <input type="submit" class="submit" value="Submit">
+
+    </form>
+</body>
+
+</html>
