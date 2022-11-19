@@ -229,7 +229,7 @@ def logout():
 def today():
       
       
-      sql = "SELECT * FROM EXPENSE  WHERE userid =? AND date = (values current date)+1"
+      sql = "SELECT * FROM EXPENSE  WHERE userid =? AND date = (values current date)"
       stmt = ibm_db.prepare(conn, sql)
       ibm_db.bind_param(stmt,1,session['id'])
       ibm_db.execute(stmt)
@@ -239,7 +239,7 @@ def today():
       
       
 
-      sql = "SELECT * FROM EXPENSE WHERE USERID=? AND DATE(date) = (values current date)+1"
+      sql = "SELECT * FROM EXPENSE WHERE USERID=? AND DATE(date) = (values current date)"
       stmt = ibm_db.prepare(conn, sql)
       ibm_db.bind_param(stmt,1,session['id'])
       ibm_db.execute(stmt)

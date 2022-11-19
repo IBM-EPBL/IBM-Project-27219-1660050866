@@ -4,7 +4,7 @@ import ibm_db
 from flask import Flask, redirect, render_template, request, session, url_for
 from markupsafe import escape
 
-conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=764264db-9824-4b7c-82df-40d1b13897c2.bs2io90l08kqb1od8lcg.databases.appdomain.cloud;PORT=32536;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=dkh61031;PWD=epbaJyxx5Cfi7vTl",'','')
+conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=2d46b6b4-cbf6-40eb-bbce-6251e6ba0300.bs2io90l08kqb1od8lcg.databases.appdomain.cloud;PORT=32328;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=cgw60170;PWD=hL5klKYr3HUySK4X", '', '')
 
 app = Flask(__name__)
 app.secret_key='a'
