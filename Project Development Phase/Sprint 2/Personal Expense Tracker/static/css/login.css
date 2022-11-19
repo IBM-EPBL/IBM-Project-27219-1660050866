@@ -1,0 +1,111 @@
+body {
+    align-items: center;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form {
+    background-color: cadetblue;
+    border-radius: 39px;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 427px;
+}
+
+.title {
+    color: #eee;
+    font-family: cursive;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-left: 130px;
+}
+
+.subtitle {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.ic1 {
+    margin-top: 40px;
+}
+
+.ic2 {
+    margin-top: 30px;
+}
+
+.input {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 14px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+}
+
+
+.placeholder {
+    color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+}
+
+
+.input:not(:placeholder-shown)~.placeholder {
+    color: transparent;
+}
+
+.input:focus~.placeholder {
+    color: transparent;
+}
+
+.submit {
+    margin-left: 129px;
+    background-color: darkorange;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 37%;
+}
+
+.submit:active {
+    background-color: #06b;
+}
+
+.register {
+    color: white;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.registerHere{
+    color: red;
+}

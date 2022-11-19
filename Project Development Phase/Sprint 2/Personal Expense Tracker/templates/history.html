@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/css/history.css" />
+</head>
+
+<body style="background-color: bisque;">
+    <nav class="navbar navbar-default" style="background-color: cadetblue;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" style="font-family: cursive;" href="#">
+                    Expense Tracker</a>
+            </div>
+            <ul class="nav navbar-nav">
+
+                <li class="active"><a href="/home">Home</a></li>
+                <li><a href="/addExpense">Add</a></li>
+                <li><a href="/history">History</a></li>
+                <li><a href="/limit">Limit</a></li>
+                <li><a href="/today">Report</a></li>
+
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <table class="table table-dark">
+            <thead>
+                <td scope="col">Date</td>
+                <td scope="col">Expense Name</td>
+                <td scope="col">Expense Amount</td>
+                <td scope="col">Expense Category</td>
+                <td scope="col">Payment Method</td>
+            </thead>
+            <tbody>
+                {% for row in students %}
+                <tr>
+                    <td scope="row">{{row["DATE"]}}</td>
+                    <td> {{ row["NAME"]}}</td>
+                    <td>{{row["AMOUNT"]}}</td>
+                    <td>{{row['CATEGORY']}}</td>
+                    <td>{{row['PAYMENTMETHOD']}}</td>
+                    <!--<td><a href="/delete/{{row['NAME']}}">Delete</a></td>-->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+
+</html>

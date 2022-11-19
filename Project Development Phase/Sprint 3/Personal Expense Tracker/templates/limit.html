@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/history.css" />
+</head>
+
+<body style="background-color: bisque;">
+    <nav class="navbar navbar-default" style="background-color: cadetblue;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" style="color:white; font-family: cursive;">
+                    Expense Tracker</a>
+            </div>
+            <ul class="nav navbar-nav">
+
+                <li><a href="/home" style="color:white;">Home</a></li>
+                <li><a href="/addExpense" style="color:white;">Add</a></li>
+                <li><a href="/history" style="color:white;">History</a></li>
+                <li class="active"><a href="/limit" style="color:#15172b;">Limit</a></li>
+                <li><a href="/today" style="color:white;">Report</a></li>
+
+                <li><a href="/logout" style="color:white;">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+    <!--<p> Currently your MONTHLY limit is ₹ {{y}} </p>-->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+        }
+    </style>
+
+    <form action="/limitnum" method="POST">
+
+        <p> ENTER the MONTHLY LIMIT to avoid over EXPENSES</p> <br/>
+
+
+
+        <input type="number" name="number" required/> <span> 
+        <button class="btn btn-warning" type="submit">ENTER</button>
+    </span>
+
+
+
+
+    </form>
+</body>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/history.css" />
+</head>
+
+<body style="background-color: bisque;">
+    <nav class="navbar navbar-default" style="background-color: cadetblue;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" style="color:white; font-family: cursive;">
+                    Expense Tracker</a>
+            </div>
+            <ul class="nav navbar-nav">
+
+                <li><a href="/home" style="color:white;">Home</a></li>
+                <li><a href="/addExpense" style="color:white;">Add</a></li>
+                <li class="active"><a href="/history" style="color:#15172b;">History</a></li>
+                <li><a href="/limit" style="color:white;">Limit</a></li>
+                <li><a href="/today" style="color:white;">Report</a></li>
+
+                <li><a href="/logout" style="color:white;">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <table class="table table-dark">
+            <thead>
+                <td scope="col">Date</td>
+                <td scope="col">Expense Name</td>
+                <td scope="col">Expense Amount</td>
+                <td scope="col">Expense Category</td>
+                <td scope="col">Payment Method</td>
+            </thead>
+            <tbody>
+                {% for row in students %}
+                <tr>
+                    <td scope="row">{{row["DATE"]}}</td>
+                    <td> {{ row["NAME"]}}</td>
+                    <td>{{row["AMOUNT"]}}</td>
+                    <td>{{row['CATEGORY']}}</td>
+                    <td>{{row['PAYMENTMETHOD']}}</td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div style="margin-left: 160px; margin-right: 150px ;font-family: cursive; margin-top: 30px; font-size: larger; background-color: darkorange; color: white;">
+        <p style="margin-top: 10px; margin-left: 10px">Total Expense : </p>
+        <p style="margin-top: 10px; margin-left: 10px">{{total}}</p>
+    </div>
+</body>
+
+</html>
