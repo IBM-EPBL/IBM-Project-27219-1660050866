@@ -1,8 +1,8 @@
 # IBM-Project-27219-1660050866
 Personal Expense Tracker Application <br />
 Team Lead - Tharshan <br />
-Team Member - Lavan <br />
 Team Member - Sailesh Kathir <br />
+Team Member - Lavan <br />
 Team Member - Yuvaraja <br />
 
 **Category**
